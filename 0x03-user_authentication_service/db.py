@@ -37,7 +37,7 @@ class DB:
         self._session.add(user)
         self._session.commit()
         return user
-    
+
     def find_user_by(self, **kwargs) -> User:
         """Find a user in the database based on the specified criteria."""
         try:
@@ -47,4 +47,3 @@ class DB:
         except InvalidRequestError:
             raise InvalidRequestError()
         return user
-
